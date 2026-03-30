@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Dwarfism - Student Presentation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* BASIC SETUP */
+        * { box-sizing: border-box; }
+        body { 
+            background-color: #f0f4f8; 
+            margin: 0; 
+            padding: 40px 0; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            gap: 40px; 
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .slide {
+            width: 1280px;
+            height: 720px;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            padding: 60px;
+            border: 2px solid #e2e8f0;
+        }
+
+        /* DESIGN ACCENTS */
+        .slide::after {
+            content: "";
+            position: absolute;
+            bottom: -50px;
+            right: -50px;
+            width: 300px;
+            height: 300px;
+            background: #6366f1;
+            border-radius: 50%;
+            opacity: 0.05;
+        }
+
+        /* TYPOGRAPHY */
+        h1, h2, h3 { font-family: 'Lexend', sans-serif; color: #1e293b; margin: 0; }
+        h1 { font-size: 80px; text-align: center; margin-top: 150px; color: #6366f1; }
+        .slide-title { font-size: 48px; margin-bottom: 30px; border-left: 8px solid #6366f1; padding-left: 20px; }
+        p, li { font-size: 22px; line-height: 1.6; color: #475569; }
+        .highlight { color: #6366f1; font-weight: 700; }
+
+        /* LAYOUTS */
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+        .box { background: #f8fafc; border: 1px solid #e2e8f0; padding: 30px; border-radius: 16px; height: 100%; }
+        
+        /* PUNNETT SQUARE */
+        table { border-collapse: separate; border-spacing: 10px; width: 100%; margin-top: 20px; }
+        td, th { padding: 30px; text-align: center; border-radius: 12px; font-size: 28px; font-weight: 700; }
+        th { background: #1e293b; color: white; }
+        td { border: 3px solid #e2e8f0; background: #fff; }
+        .affected-cell { background: #fee2e2; color: #b91c1c; border-color: #fca5a5; }
+        .carrier-cell { background: #e0e7ff; color: #3730a3; border-color: #a5b4fc; }
+
+        /* PEDIGREE ICON PLACEHOLDERS */
+        .pedigree-box { display: flex; justify-content: center; gap: 20px; margin-top: 40px; }
+        .shape { width: 60px; height: 60px; border: 3px solid #1e293b; display: flex; align-items: center; justify-content: center; font-weight: bold; }
+        .square { border-radius: 0; }
+        .circle { border-radius: 50%; }
+        .filled { background: #1e293b; color: white; }
+
+        /* LINKS */
+        a { color: #6366f1; text-decoration: none; font-weight: 700; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+<!-- SLIDE 1: TITLE -->
+<div class="slide">
+    <h1>All About<br>Dwarfism</h1>
+    <p style="text-align: center; font-size: 28px; margin-top: 20px;">Exploring Achondroplasia & Genetic Growth</p>
+    <p style="text-align: center; color: #94a3b8; margin-top: 100px;">Biology Benchmark #1 Presentation</p>
+</div>
+
+<!-- SLIDE 2: DESCRIPTION -->
+<div class="slide">
+    <h2 class="slide-title">What is it exactly?</h2>
+    <div class="grid-2">
+        <div class="box">
+            <h3>Definition</h3>
+            <p>Dwarfism is a condition where a person is shorter than average (usually under 4'10"). The most common type is <span class="highlight">Achondroplasia</span>.</p>
+            <p>It's not a "disease" you can catch; it's a difference in how bones develop from cartilage during growth.</p>
+        </div>
+        <div class="box">
+            <h3>History</h3>
+            <p>People with dwarfism have been part of human history forever. You can see them in ancient art from Egypt and Rome. In the past, they were often seen as unique or even magical, but today we understand the biology behind it.</p>
+        </div>
+    </div>
+</div>
+
+<!-- SLIDE 3: HOW IT AFFECTS INDIVIDUALS -->
+<div class="slide">
+    <h2 class="slide-title">How it affects the body</h2>
+    <div class="grid-2">
+        <div class="box">
+            <h3>Physical Traits</h3>
+            <ul>
+                <li>Shorter arms and legs (especially the upper parts).</li>
+                <li>An average-sized torso (trunk).</li>
+                <li>A larger head with a prominent forehead.</li>
+                <li>Short fingers (trident hand).</li>
+            </ul>
+        </div>
+        <div class="box">
+            <h3>Life Expectancy</h3>
+            <p>Good news! Most people with dwarfism have a <span class="highlight">normal life expectancy</span>. They live long, full lives just like anyone else. Sometimes there are small health issues with breathing or the spine, but they don't usually shorten lifespan.</p>
+        </div>
+    </div>
+</div>
+
+<!-- SLIDE 4: INHERITANCE PATTERN -->
+<div class="slide">
+    <h2 class="slide-title">The Genetics</h2>
+    <div class="grid-2">
+        <div class="box">
+            <h3>Inheritance Pattern</h3>
+            <p>Dwarfism (Achondroplasia) is <span class="highlight">Autosomal Dominant</span>.</p>
+            <p>This means you only need <strong>one copy</strong> of the mutated gene to have the condition. If you have the gene, you will show the trait.</p>
+        </div>
+        <div class="box">
+            <h3>The "Carrier" Question</h3>
+            <p>Can you be a "hidden carrier" (heterozygous) and not show symptoms? <span class="highlight">No.</span></p>
+            <p>Since it's dominant, if you are heterozygous (Aa), you will have dwarfism. People without dwarfism are (aa) and don't carry the gene at all.</p>
+        </div>
+    </div>
+</div>
+
+<!-- SLIDE 5: PUNNETT SQUARE -->
+<div class="slide">
+    <h2 class="slide-title">Step 2: Punnett Square Analysis</h2>
+    <p>Scenario: One <strong>Heterozygous</strong> parent (Aa) and one <strong>Affected</strong> parent (Aa).</p>
+    <div class="grid-2">
+        <table>
+            <tr>
+                <th></th>
+                <th>A</th>
+                <th>a</th>
+            </tr>
+            <tr>
+                <th>A</th>
+                <td class="affected-cell">AA (Lethal)</td>
+                <td class="affected-cell">Aa (Affected)</td>
+            </tr>
+            <tr>
+                <th>a</th>
+                <td class="affected-cell">Aa (Affected)</td>
+                <td style="background: #f1f5f9;">aa (Average)</td>
+            </tr>
+        </table>
+        <div class="box">
+            <h3>Analysis</h3>
+            <p>In this case:</p>
+            <ul>
+                <li><strong>75% Chance:</strong> Child has Dwarfism.</li>
+                <li><strong>25% Chance:</strong> Child is average height.</li>
+                <li><em>Note:</em> AA is actually a "lethal" combination in achondroplasia, meaning the baby usually doesn't survive birth.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- SLIDE 6: PEDIGREE -->
+<div class="slide">
+    <h2 class="slide-title">Step 3: Pedigree Scenario</h2>
+    <div class="box">
+        <h3>How it looks in a family tree:</h3>
+        <p>Because 80% of cases are "spontaneous mutations" (brand new changes in the DNA), it often looks like this:</p>
+        <div class="pedigree-box">
+            <div class="shape circle">Gen 1</div>
+            <div style="font-size: 40px;">+</div>
+            <div class="shape square">Gen 1</div>
+        </div>
+        <p style="text-align: center;">(Two average height parents)</p>
+        <div style="text-align: center; font-size: 40px;">↓</div>
+        <div class="pedigree-box">
+            <div class="shape circle filled">Gen 2</div>
+            <p style="margin-left: 20px;">The first person in the family with the trait (Aa).</p>
+        </div>
+    </div>
+    <p style="margin-top: 20px; font-style: italic;">*Make sure to check with Ms. Hoff for your group's specific scenario!</p>
+</div>
+
+<!-- SLIDE 7: DIAGNOSIS & PREVALENCE -->
+<div class="slide">
+    <h2 class="slide-title">Diagnosis & Prevalence</h2>
+    <div class="grid-2">
+        <div class="box">
+            <h3>How is it diagnosed?</h3>
+            <ul>
+                <li><strong>Ultrasound:</strong> Seeing short limbs before birth.</li>
+                <li><strong>Genetic Testing:</strong> A blood test to find the FGFR3 mutation.</li>
+                <li><strong>X-rays:</strong> Checking bone structure after birth.</li>
+            </ul>
+        </div>
+        <div class="box">
+            <h3>How common is it?</h3>
+            <p>It affects about <span class="highlight">1 in 25,000</span> people. It happens equally across all races, genders, and populations.</p>
+        </div>
+    </div>
+</div>
+
+<!-- SLIDE 8: TREATMENT -->
+<div class="slide">
+    <h2 class="slide-title">Treatments & Interventions</h2>
+    <div class="box">
+        <p>There is no "cure" for dwarfism because it's part of the person's DNA, but there are ways to help:</p>
+        <ul>
+            <li><strong>Growth Medication:</strong> New drugs like <em>Vosoritide</em> can help slightly increase bone growth in kids.</li>
+            <li><strong>Surgery:</strong> Some people have surgery to help with spine pressure or to straighten legs.</li>
+            <li><strong>Physical Therapy:</strong> Helps keep muscles and joints strong.</li>
+            <li><strong>Adaptations:</strong> Using stools, pedal extenders for cars, and lower counters!</li>
+        </ul>
+    </div>
+</div>
+
+<!-- SLIDE 9: SOURCES -->
+<div class="slide">
+    <h2 class="slide-title">Sources</h2>
+    <div class="box">
+        <p>Check out these links for more info:</p>
+        <ul style="list-style: none; padding: 0;">
+            <li style="margin-bottom: 20px;"><i class="fa-solid fa-link"></i> <a href="https://www.lpaonline.org/">Little People of America (LPA)</a></li>
+            <li style="margin-bottom: 20px;"><i class="fa-solid fa-link"></i> <a href="https://medlineplus.gov/genetics/condition/achondroplasia/">MedlinePlus: Achondroplasia Basics</a></li>
+            <li style="margin-bottom: 20px;"><i class="fa-solid fa-link"></i> <a href="https://www.mayoclinic.org/diseases-conditions/dwarfism/symptoms-causes/syc-20371969">Mayo Clinic - Dwarfism Guide</a></li>
+            <li style="margin-bottom: 20px;"><i class="fa-solid fa-link"></i> <a href="https://www.genome.gov/Genetic-Disorders/Achondroplasia">National Human Genome Research Institute</a></li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
